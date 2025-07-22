@@ -6,227 +6,241 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Influencer's Gear Shop | Home</title>
     <link rel="shortcut icon" href="./images/main-camera.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="tailwind.init.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+
+        @layer utilities {
+            .filter-pink {
+                filter: invert(33%) sepia(76%) saturate(1199%) hue-rotate(315deg) brightness(91%) contrast(91%);
+            }
+        }
+    </style>
 </head>
 
-<body class="font-serif">
-    <main class="bg-white pl-[120px] pt-[90px] pr-[120px]">
-        <header class="mb-[50px]">
-            <nav class="flex justify-between">
-                <h2 class="text-3xl text-bold font-extrabold">Podium</h2>
-                <ul class="flex space-x-5 text-md">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#"><img src="./logos/search.png" alt="" class="w-5 h-5"></a></li>
-                    <li><a href="#"><img src="./logos/add-to-cart.png" alt="" class="w-5 h-5"></a></li>
+<body class="font-manrope">
+    <main class="bg-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-40 pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24">
+        <!-- Header/Navigation -->
+        <header class="mb-8 sm:mb-12 md:mb-16">
+            <nav class="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+                <h2 class="text-2xl sm:text-3xl font-extrabold">Podium</h2>
+                <ul class="flex flex-wrap justify-center gap-3 sm:gap-5 text-sm sm:text-base">
+                    <li><a href="#" class="hover:text-[#E02C6D] transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-[#E02C6D] transition-colors">Portfolio</a></li>
+                    <li><a href="#" class="hover:text-[#E02C6D] transition-colors">Sign Up</a></li>
+                    <li><a href="#" class="hover:text-[#E02C6D] transition-colors">Log in</a></li>
+                    <li><a href="#"><img src="./logos/search.png" alt="Search" class="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-80 transition-opacity"></a></li>
+                    <li><a href="#"><img src="./logos/add-to-cart.png" alt="Cart" class="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-80 transition-opacity"></a></li>
                 </ul>
             </nav>
         </header>
-        <section class="flex space-x-32">
-            <div>
-                <h1 class="mt-[100px] text-5xl w-[562px]">Start your Journey as Influencer</h1>
-                <p class="mt-[20px]">Elevate your aesthetic with gear designed for influencers who demand perfection.
-                    Sleek, powerful, and built to make your content unforgettable.</p>
-                <button class="
-                     mt-4 w-[196px] h-[44px] bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110
-                               ">Prebook Now</button>
+        
+        <!-- Hero Section -->
+        <section class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 xl:gap-24">
+            <div class="order-2 lg:order-1 text-center lg:text-left">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-bold max-w-full lg:max-w-[562px] mt-0 lg:mt-[100px]">Start your Journey as Influencer</h1>
+                <p class="mt-4 sm:mt-5 md:mt-6 text-sm sm:text-base md:text-lg text-gray-600">Elevate your aesthetic with gear designed for influencers who demand perfection. Sleek, powerful, and built to make your content unforgettable.</p>
+                <button class="mt-4 sm:mt-5 md:mt-6 w-40 sm:w-48 md:w-52 h-10 sm:h-12 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                    Prebook Now
+                </button>
             </div>
-            <div class="relative">
-                <img src="./images/Circle design.svg" alt="" class="w-[440px] h-[440px] ">
-                <img src="./images/main-camera.png" alt=""
-                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px]">
+            <div class="order-1 lg:order-2 relative">
+                <img src="./images/Circle design.svg" alt="Circle Design" class="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[440px] lg:h-[440px]">
+                <img src="./images/main-camera.png" alt="Main Camera" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 sm:w-56 md:w-64 lg:w-[300px]">
             </div>
         </section>
-        <section class="mt-[106px] mb-24 pl-45px pr-[45] flex justify-center space-x-[50px]">
-            <img src="./logos/Alibaba.svg" alt="" class="img">
-            <img src="./logos/Amazon.svg" alt="" class="img">
-            <img src="./logos/Daraz.pk Logo.svg" alt="" class="img">
-            <img src="./logos/Ebay.svg" alt="" class="img">
-            <img src="./logos/Rakuten.svg" alt="" class="img">
-            <img src="./logos/Walmart.svg" alt="" class="img">
-            <img src="./logos/Target.svg" alt="" class="img">
 
+        <!-- Brand Logos Section -->
+        <section class="mt-16 sm:mt-20 md:mt-24 lg:mt-28 mb-12 sm:mb-16 md:mb-20 lg:mb-24 px-4 py-8 border-t border-b border-gray-200">
+            <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+                <img src="./logos/Alibaba.svg" alt="Alibaba" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src="./logos/Amazon.svg" alt="Amazon" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src="./logos/Daraz.pk Logo.svg" alt="Daraz" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src="./logos/Ebay.svg" alt="Ebay" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src="./logos/Rakuten.svg" alt="Rakuten" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src="./logos/Walmart.svg" alt="Walmart" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src="./logos/Target.svg" alt="Target" class="w-16 sm:w-20 md:w-24 h-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+            </div>
         </section>
-        <section class="pt-[100px] pl-[32px] pr-[32px]">
-            <h1 class="text-center text-3xl h-[72px] font-bold">Popular Collection</h1>
-            <div class="card-container grid grid-cols-3 gap-[30px]">
-                <!--item1-->
 
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/airpod.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Airpods</h3>
-                    <h4 class="text-xl  font-lora "><b>$50.99</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <!--item1-->
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/action.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Go Pro</h3>
-                    <h4 class="text-xl  font-lora "><b>$109.99</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/camera.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Camera</h3>
-                    <h4 class="text-xl  font-lora "><b>$459.99</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/drone.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Drone</h3>
-                    <h4 class="text-xl  font-lora "><b>$150.90</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/tripod.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Tripod</h3>
-                    <h4 class="text-xl  font-lora "><b>$33.99</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/lights.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Studio Lights</h3>
-                    <h4 class="text-xl  font-lora "><b>$1200.00</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/mic.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Microphone</h3>
-                    <h4 class="text-xl  font-lora "><b>$95.99</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/setup.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">PhotoShoot SetUp</h3>
-                    <h4 class="text-xl  font-lora "><b>$820.90</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
-                </div>
-                <div class="card w-[300px] h-[510px] pt-[17px] pb-[17px] pl-[15px] pr-[15px] rounded-2xl shadow-2xl">
-                    <img src="./images/single-light.png" alt="" class="rounded-md">
-                    <h3 class="text-3xl mt-4 mb-3">Green Screen</h3>
-                    <h4 class="text-xl  font-lora "><b>$29.99</b></h4>
-                    <img src="./logos/ratings.png" alt="" class="">
-                    <br>
-                    <p class="w-[196px] h-[61px] text-gray-500">Wordwide shifting available
-                        Buyers protection possible!</p>
-                    <button class=" mt-6 w-22 h-8 bg-[#E02C6D] rounded-2xl text-white 
-                     hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110">Buy Now</button>
+        <!-- Popular Collection -->
+        <section class="pt-12 sm:pt-16 md:pt-20 lg:pt-24 px-4 sm:px-6 md:px-8">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10 md:mb-12">Popular Collection</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Product Card 1 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/airpod.png" alt="Airpods" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Airpods</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$50.99</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
                 </div>
 
+                <!-- Product Card 2 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/action.png" alt="Action Camera" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Go Pro</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$109.99</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/camera.png" alt="Camera" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Camera</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$459.99</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/drone.png" alt="Drone" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Drone</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$150.90</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/tripod.png" alt="Tripod" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Tripod</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$33.99</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/lights.png" alt="Studio Lights" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Studio Lights</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$1200.00</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/mic.png" alt="Microphone" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Microphone</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$95.99</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/setup.png" alt="PhotoShoot SetUp" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Studio Setup</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$820.90</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
+
+                <!-- Product Card 9 -->
+                <div class="card w-full max-w-xs sm:max-w-none mx-auto sm:mx-0 p-4 sm:p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+                    <img src="./images/single-light.png" alt="Green Screen" class="w-full h-48 sm:h-56 object-contain rounded-md">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl mt-3 sm:mt-4 mb-2 sm:mb-3 font-semibold">Green Screen</h3>
+                    <h4 class="text-lg sm:text-xl font-bold text-gray-800">$29.99</h4>
+                    <div class="my-2 sm:my-3">
+                        <img src="./logos/ratings.png" alt="Ratings" class="w-24 sm:w-28">
+                    </div>
+                    <p class="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6">Wordwide shifting available Buyers protection possible!</p>
+                    <button class="w-full sm:w-24 h-8 sm:h-10 bg-[#E02C6D] rounded-2xl text-white hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 text-sm sm:text-base font-medium">
+                        Buy Now
+                    </button>
+                </div>
             </div>
-            <div class="mt-[30px] flex justify-end gap-1">
-                <button class="text-[#E02C6D]">See More </button>
-                <img src="./logos/right.png" alt="" style="color: #E02C6D; " class="w-5 h-5">
 
+            <div class="mt-8 sm:mt-10 md:mt-12 flex justify-end gap-2">
+                <button class="text-[#E02C6D] hover:text-[#e02cb3b2] transition-colors text-sm sm:text-base font-medium">See More</button>
+                <img src="./logos/right.png" alt="Right Arrow" class="w-4 h-4 sm:w-5 sm:h-5 filter-pink">
             </div>
-
-
-
         </section>
-        <section class=" mt-[100px] flex gap-[96px]">
-            <div class="w-[404px] h-[270px]">
-                <img src="./images/gear.png" alt="" class="w-[404px] h-[270px]">
+
+        <!-- Featured Products Section -->
+        <section class="mt-12 sm:mt-16 md:mt-20 lg:mt-24 flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 xl:gap-24 items-center">
+            <div class="w-full lg:w-1/2">
+                <img src="./images/gear.png" alt="Gear" class="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow">
             </div>
-            <div class="w-[610px] h-[224px]">
-                <h1 class="text-3xl font-bold">Featured products at one place</h1>
-                <p class="mt-[16px]">
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Featured products at one place</h1>
+                <p class="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-gray-600">
                     Discover our handpicked selection of featured products, all brought together
                     in one convenient place. From top-rated essentials to the latest trends, explore
                     the best we have to offer—carefully curated to meet your needs and elevate your experience.
                 </p>
-                <button class="  hover:bg-[#e02cb3b2]
-                    transform transition duration-300 hover:scale-110 focus:scale-110
-                mt-[20px] w-[155px] h-[44px] rounded-2xl bg-[#E02C6D] text-white 
-                pl-[25px] pr-[25px] pt-[10px] pb-[10px] flex">
-                    <div>Join Now </div><img src="./logos/right2.png" alt="">
+                <button class="hover:bg-[#e02cb3b2] transform transition duration-300 hover:scale-105 focus:scale-105 w-36 sm:w-40 md:w-44 h-10 sm:h-12 rounded-2xl bg-[#E02C6D] text-white flex items-center justify-center mx-auto lg:mx-0 gap-2 text-sm sm:text-base font-medium">
+                    <span>Join Now</span>
+                    <img src="./logos/right2.png" alt="Right Arrow" class="w-3 h-3 sm:w-4 sm:h-4 filter-pink">
                 </button>
             </div>
         </section>
     </main>
-    <footer class="mt-[100px] bg-[#0A0826] h-[300px] flex  justify-center text-center content-center">
-        <div class="text-white justify-center text-center content-center">
-            <h2 class="text-3xl mb-[20px]">Podium</h2>
-            <p class=" ">Copyright © 2025 Podium</p>
-            <p class=" ">All rights reserved</p>
-            <div class="mt-[20px] flex justify-center gap-[16px]">
-                <div class="w-[32px] h-[32px] bg-white/10 rounded-full flex items-center justify-center">
-                    <a href="#">
-                        <img src="./logos/instagram.svg" alt="Instagram" class="w-[24px] h-[24px]" />
-                    </a>
-                </div>
-                <div class="w-[32px] h-[32px] bg-white/10 rounded-full flex items-center justify-center">
-                    <a href="#">
-                        <img src="./logos/x.svg" alt="Instagram" class="w-[22px] h-[22px]" />
-                    </a>
-                </div>
-                <div class="w-[32px] h-[32px] bg-white/10 rounded-full flex items-center justify-center">
-                    <a href="#">
-                        <img src="./logos/pinterest.svg" alt="Instagram" class="w-[24px] h-[24px]" />
-                    </a>
-                </div>
-                <div class="w-[32px] h-[32px] bg-white/10 rounded-full flex items-center justify-center">
-                    <a href="#">
-                        <img src="./logos/youtube.svg" alt="Instagram" class="w-[24px] h-[24px]" />
-                    </a>
-                </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 sm:mt-16 md:mt-20 lg:mt-24 bg-[#0A0826] py-12 sm:py-16 md:py-20">
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">Podium</h2>
+            <p class="text-xs sm:text-sm md:text-base text-gray-300 mb-1">Copyright © 2025 Podium</p>
+            <p class="text-xs sm:text-sm md:text-base text-gray-300 mb-6 sm:mb-8">All rights reserved</p>
+            <div class="flex justify-center gap-3 sm:gap-4">
+                <a href="#" aria-label="Instagram" class="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E02C6D] transition-colors">
+                    <img src="./logos/instagram.svg" alt="Instagram" class="w-4 h-4 sm:w-5 sm:h-5">
+                </a>
+                <a href="#" aria-label="Twitter" class="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E02C6D] transition-colors">
+                    <img src="./logos/x.svg" alt="Twitter" class="w-4 h-4 sm:w-5 sm:h-5">
+                </a>
+                <a href="#" aria-label="Pinterest" class="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E02C6D] transition-colors">
+                    <img src="./logos/pinterest.svg" alt="Pinterest" class="w-4 h-4 sm:w-5 sm:h-5">
+                </a>
+                <a href="#" aria-label="YouTube" class="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#E02C6D] transition-colors">
+                    <img src="./logos/youtube.svg" alt="YouTube" class="w-4 h-4 sm:w-5 sm:h-5">
+                </a>
             </div>
-
         </div>
-
     </footer>
 </body>
 
